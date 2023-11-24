@@ -25,7 +25,10 @@ class MyCartPage extends StatelessWidget {
                           return Nav();
                         }));
                       },
-                      icon: Icon(Icons.arrow_back_ios_outlined, color: Colors.orange,),
+                      icon: Icon(
+                        Icons.arrow_back_ios_outlined,
+                        color: Colors.orange,
+                      ),
                       splashRadius: 20),
                 ),
                 Text(
@@ -62,87 +65,82 @@ class MyCartPage extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  "Ringkasan Belanja",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      "Ringkasan Belanja",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 10, left: 20),
-                    child: Text("PPN 11%"),
-                  ),
-                  SizedBox(width: 220,),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Text("Rp 8.910,00"),
-                  )
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 10, left: 20),
-                    child: Text("Total Belanja"),
-                  ),
-                  SizedBox(width: 190,),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Text("Rp 81.000,00"),
-                  )
-                ],
-              ),
-              Divider(
-                indent: 20,
-                endIndent: 20,
-                thickness: 4,
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 10, left: 20),
-                    child: Text(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text("PPN 11%"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text("Rp 8.910,00"),
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text("Total Belanja"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text("Rp 81.000,00"),
+                    )
+                  ],
+                ),
+                Divider(
+                  thickness: 4,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
                       "Total Pembayaran",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                  ),
-                  SizedBox(width: 157,),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Text("Rp 89.910,00"),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Center(
-                child: Container(
-                  width: 300,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.blue[700]
-                  ),
-                  child: TextButton(
-                    onPressed: (){},
-                    child: Text(
-                      "Checkout",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+                    Text("Rp 89.910,00")
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: Container(
+                    width: 300,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blue[700]),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Checkout",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
